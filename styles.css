@@ -675,6 +675,85 @@ a:focus, button:focus{
 }
 
 
+
+/* ===== Service Areas (band with chip list) ===== */
+.areas-band{
+  padding: clamp(32px, 6vw, 72px) 0;
+  background:
+    radial-gradient(60rem 60rem at 115% -20%, color-mix(in srgb, var(--primary) 8%, #fff), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--secondary) 8%, #fff), transparent) no-repeat,
+    linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
+  border-top: 1px solid rgba(2,6,23,0.06);
+  border-bottom: 1px solid rgba(2,6,23,0.06);
+}
+
+.areas-head{
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(14px, 3vw, 22px);
+}
+
+.areas-pin{
+  width: 56px; height: 56px; border-radius: 999px;
+  display: grid; place-items: center;
+  background:
+    conic-gradient(from 0deg, var(--primary), var(--secondary), var(--primary));
+  -webkit-mask: radial-gradient(#000 68%, transparent 70%);
+          mask: radial-gradient(#000 68%, transparent 70%);
+  position: relative;
+}
+.areas-pin::after{
+  content:""; position:absolute; inset:6px; background:#fff; border-radius:999px;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
+}
+.areas-pin svg{ width: 26px; height: 26px; position: relative; z-index:1; fill: var(--ink); }
+
+.areas-title{
+  margin:0; font-size: clamp(22px, 3.2vw, 32px);
+}
+.areas-subtitle{
+  margin:4px 0 0; color: var(--muted); max-width: 60ch;
+}
+
+.areas-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.areas-list .chip{
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid rgba(2,6,23,0.08);
+  box-shadow: var(--shadow);
+  border-radius: 999px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Text fallback (optional) */
+.areas-fallback{
+  margin: 12px 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 560px){
+  .areas-head{ grid-template-columns: 48px 1fr; }
+  .areas-pin{ width:48px; height:48px; }
+  .areas-pin::after{ inset:5px; }
+  .areas-list{ grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+}
+
+
+
+
 /* Reviews */
 .reviews{ grid-template-columns: repeat(3, minmax(0,1fr)) }
 .review{ font-style: italic }
