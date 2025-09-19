@@ -75,61 +75,97 @@
   </section>
 
   <!-- Services -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section__title">Pest Control Services</h2>
-      <div class="grid services">
-        <article class="card service">
-          <div class="service__icon" aria-label="Ant control">
-            <!-- Ant icon -->
-            <svg viewBox="0 0 24 24" role="img" aria-label="Ant" focusable="false"><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm6.5 4h-2.3l-1.2-2h1.5a1 1 0 1 0 0-2h-2.1l-.9-1.6a3.96 3.96 0 0 0-2 0L8.6 10H6.5a1 1 0 1 0 0 2H8l-1.2 2H4.5a1 1 0 1 0 0 2h1.5l-1.1 2a1 1 0 0 0 1.8.9l1.4-2.6h8.8l1.4 2.6a1 1 0 0 0 1.8-.9l-1.1-2h1.5a1 1 0 1 0 0-2Z"/></svg>
-          </div>
-          <h3>Ants</h3>
-          <p>Targeted perimeter and interior treatments to eliminate colonies and stop re-entry.</p>
-        </article>
+<section class="section services-pro" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <header class="services-pro__head">
+      <h2 class="section__title" id="services-title">Pest Control Services</h2>
+      <p class="services-pro__subtitle">Targeted treatments for the pests that hit {{CITY}} most.</p>
+    </header>
 
-        <article class="card service">
-          <div class="service__icon" aria-label="Roach control">
-            <svg viewBox="0 0 24 24" role="img" aria-label="Roach" focusable="false"><path d="M12 3c-1.7 0-3 1.8-3 4v2H7a1 1 0 1 0 0 2h2v2.1L7.7 15a1 1 0 1 0 1.2 1.6l2.1-1.6V18a1 1 0 1 0 2 0v-3l2.1 1.6a1 1 0 0 0 1.2-1.6L15 13.1V11h2a1 1 0 1 0 0-2h-2V7c0-2.2-1.3-4-3-4Z"/></svg>
-          </div>
-          <h3>Roaches</h3>
-          <p>Crack-and-crevice treatment and sanitation guidance for long-term protection.</p>
-        </article>
+    <div class="services-pro__grid">
+      <!-- Ants -->
+      <article class="service-card" role="article">
+        <div class="service-card__icon" aria-label="Ant control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Ant icon" focusable="false"><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm6.5 4h-2.3l-1.2-2h1.5a1 1 0 1 0 0-2h-2.1l-.9-1.6a3.96 3.96 0 0 0-2 0L8.6 10H6.5a1 1 0 1 0 0 2H8l-1.2 2H4.5a1 1 0 1 0 0 2h1.5l-1.1 2a1 1 0 0 0 1.8.9l1.4-2.6h8.8l1.4 2.6a1 1 0 0 0 1.8-.9l-1.1-2h1.5a1 1 0 1 0 0-2Z"/></svg>
+        </div>
+        <h3 class="service-card__title">Ants</h3>
+        <p class="service-card__text">Perimeter and interior treatments stop trails and eliminate colonies at the source.</p>
+        <ul class="service-card__tags" aria-label="Treatment highlights">
+          <li class="chip">Family-Safe</li><li class="chip">Odor-Lite</li><li class="chip">Indoor/Outdoor</li>
+        </ul>
+      </article>
 
-        <article class="card service">
-          <div class="service__icon" aria-label="Rodent control">
-            <svg viewBox="0 0 24 24" role="img" aria-label="Rodent" focusable="false"><path d="M19 8a5 5 0 0 0-9.6-2.2A6 6 0 0 0 5 11v3h2v-3a4 4 0 1 1 8 0v3h2v-2h2V8h0Z"/></svg>
-          </div>
-          <h3>Rodents</h3>
-          <p>Exclusion, trapping, and sanitation to seal entry points and remove activity.</p>
-        </article>
+      <!-- Roaches -->
+      <article class="service-card" role="article">
+        <div class="service-card__icon" aria-label="Roach control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Roach icon" focusable="false"><path d="M12 3c-1.7 0-3 1.8-3 4v2H7a1 1 0 1 0 0 2h2v2.1L7.7 15a1 1 0 1 0 1.2 1.6l2.1-1.6V18a1 1 0 1 0 2 0v-3l2.1 1.6a1 1 0 0 0 1.2-1.6L15 13.1V11h2a1 1 0 1 0 0-2h-2V7c0-2.2-1.3-4-3-4Z"/></svg>
+        </div>
+        <h3 class="service-card__title">Roaches</h3>
+        <p class="service-card__text">Crack-and-crevice applications plus sanitation guidance for lasting results.</p>
+        <ul class="service-card__tags" aria-label="Treatment highlights">
+          <li class="chip">Kitchens</li><li class="chip">Bathrooms</li><li class="chip">Warranty</li>
+        </ul>
+      </article>
 
-        <article class="card service">
-          <div class="service__icon" aria-label="Spider control">
-            <svg viewBox="0 0 24 24" role="img" aria-label="Spider" focusable="false"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-8 2h3v2H4v-2Zm13 0h3v2h-3v-2ZM6 5l2 2-1 1-2-2 1-1Zm10 0 1 1-2 2-1-1 2-2ZM6 19l-1-1 2-2 1 1-2 2Zm11-3 2 2-1 1-2-2 1-1Z"/></svg>
-          </div>
-          <h3>Spiders</h3>
-          <p>Web knockdown and exterior treatments that keep spiders away from your home.</p>
-        </article>
+      <!-- Rodents -->
+      <article class="service-card service-card--accent" role="article" aria-label="Rodent control">
+        <div class="service-card__icon" aria-label="Rodent control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Rodent icon" focusable="false"><path d="M19 8a5 5 0 0 0-9.6-2.2A6 6 0 0 0 5 11v3h2v-3a4 4 0 1 1 8 0v3h2v-2h2V8h0Z"/></svg>
+        </div>
+        <h3 class="service-card__title">Rodents</h3>
+        <p class="service-card__text">Entry-point sealing, trapping, and sanitation to stop activity and prevent return.</p>
+        <ul class="service-card__tags" aria-label="Treatment highlights">
+          <li class="chip">Exclusion</li><li class="chip">Trapping</li><li class="chip">Cleanup</li>
+        </ul>
+      </article>
 
-        <article class="card service">
-          <div class="service__icon" aria-label="Termite control">
-            <svg viewBox="0 0 24 24" role="img" aria-label="Termite" focusable="false"><path d="M12 2a2 2 0 0 0-2 2v2h4V4a2 2 0 0 0-2-2Zm-3 6v2l-2 2 2 2v6a1 1 0 1 0 2 0v-6l1-1 1 1v6a1 1 0 1 0 2 0v-6l2-2-2-2V8H9Z"/></svg>
-          </div>
-          <h3><a href="#termite-info">Termites</a></h3>
-          <p>Comprehensive inspections and treatments to protect structures from damage.</p>
-        </article>
+      <!-- Spiders -->
+      <article class="service-card" role="article">
+        <div class="service-card__icon" aria-label="Spider control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Spider icon" focusable="false"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-8 2h3v2H4v-2Zm13 0h3v2h-3v-2ZM6 5l2 2-1 1-2-2 1-1Zm10 0 1 1-2 2-1-1 2-2ZM6 19l-1-1 2-2 1 1-2 2Zm11-3 2 2-1 1-2-2 1-1Z"/></svg>
+        </div>
+        <h3 class="service-card__title">Spiders</h3>
+        <p class="service-card__text">Web knockdown plus exterior preventive bands to keep spiders off the structure.</p>
+        <ul class="service-card__tags" aria-label="Treatment highlights">
+          <li class="chip">Eaves</li><li class="chip">Garages</li><li class="chip">Play Areas</li>
+        </ul>
+      </article>
 
-        <article class="card service">
-          <div class="service__icon" aria-label="Wasp control">
-            <svg viewBox="0 0 24 24" role="img" aria-label="Wasps" focusable="false"><path d="M12 3c-1.1 0-2 .9-2 2v3H8l-2 2 2 2h2v3a2 2 0 1 0 4 0v-3h2l2-2-2-2h-2V5c0-1.1-.9-2-2-2Z"/></svg>
-          </div>
-          <h3>Wasps</h3>
-          <p>Nest removal and preventative treatments with clear safety perimeters.</p>
-        </article>
-      </div>
+      <!-- Featured: Termites (spans wider) -->
+      <article class="service-card service-card--feature" role="article">
+        <div class="service-card__icon" aria-label="Termite control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Termite icon" focusable="false"><path d="M12 2a2 2 0 0 0-2 2v2h4V4a2 2 0 0 0-2-2Zm-3 6v2l-2 2 2 2v6a1 1 0 1 0 2 0v-6l1-1 1 1v6a1 1 0 1 0 2 0v-6l2-2-2-2V8H9Z"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Termites</h3>
+          <p class="service-card__text">Detailed inspections, species ID, and a targeted plan to protect your structure from costly damage.</p>
+          <ul class="service-card__tags" aria-label="Treatment highlights">
+            <li class="chip">Inspections</li><li class="chip">Soil/Local</li><li class="chip">Reports</li>
+          </ul>
+        </div>
+        <a class="service-card__link btn btn-primary" href="#termite-info" aria-label="Learn more about termite protection">Learn more</a>
+      </article>
+
+      <!-- Wasps -->
+      <article class="service-card" role="article">
+        <div class="service-card__icon" aria-label="Wasp control">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Wasp icon" focusable="false"><path d="M12 3c-1.1 0-2 .9-2 2v3H8l-2 2 2 2h2v3a2 2 0 1 0 4 0v-3h2l2-2-2-2h-2V5c0-1.1-.9-2-2-2Z"/></svg>
+        </div>
+        <h3 class="service-card__title">Wasps</h3>
+        <p class="service-card__text">Safe nest removal and perimeter treatments with clear safety zones.</p>
+        <ul class="service-card__tags" aria-label="Treatment highlights">
+          <li class="chip">Same-Day</li><li class="chip">Eaves</li><li class="chip">Play Areas</li>
+        </ul>
+      </article>
     </div>
-  </section>
+
+    <div class="services-pro__cta">
+      <a class="btn btn-ghost" href="#contact">Get a Quote</a>
+      <a class="btn btn-primary" href="tel:{{PHONE}}" aria-label="Call for service">{{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Why Choose Us -->
   <section class="section section--alt" id="why">
