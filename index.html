@@ -283,62 +283,149 @@
 </section>
 
 
-  <!-- Plans / Pricing -->
-  <section class="section section--alt" id="pricing">
-    <div class="container">
-      <h2 class="section__title">Plans for Every Need</h2>
-      <div class="grid plans">
-        <article class="card plan">
-          <h3>One-Time Treatment</h3>
-          <ul>
-            <li>Rapid knockdown</li>
-            <li>Problem-area focus</li>
-            <li>30-day warranty</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-        </article>
-        <article class="card plan">
-          <h3>Quarterly</h3>
-          <ul>
-            <li>Seasonal protection</li>
-            <li>Exterior perimeter</li>
-            <li>Free re-service</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-        </article>
-        <article class="card plan">
-          <h3>Bi-Annual</h3>
-          <ul>
-            <li>Twice-yearly treatments</li>
-            <li>Entry-point sealing</li>
-            <li>Extended warranty</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-        </article>
-      </div>
-    </div>
-  </section>
+  <!-- Plans / Pricing (Comparison) -->
+<section class="pricing-compare" id="pricing" aria-labelledby="pricing-title">
+  <div class="container">
+    <header class="pricing-compare__head">
+      <h2 class="pricing-compare__title" id="pricing-title">Plans for Every Need</h2>
+      <p class="pricing-compare__subtitle">Choose the coverage cadence that fits your home and season.</p>
+    </header>
 
-  <!-- Reviews -->
-  <section class="section" id="reviews">
-    <div class="container">
-      <h2 class="section__title">What Customers Say</h2>
-      <div class="grid reviews">
-        <blockquote class="card review">
-          <p>“Called at 9am, tech arrived by noon. Courteous and thorough—no more ants.”</p>
-          <footer>— Alex R.</footer>
-        </blockquote>
-        <blockquote class="card review">
-          <p>“They explained everything and used pet-safe products. Huge relief.”</p>
-          <footer>— Priya S.</footer>
-        </blockquote>
-        <blockquote class="card review">
-          <p>“Booked same-day for a wasp nest. Fast, clean, and guaranteed.”</p>
-          <footer>— Marcus D.</footer>
-        </blockquote>
-      </div>
+    <div class="pc-scroll" role="region" aria-label="Pricing comparison (scrollable on mobile)">
+      <table class="pc-table">
+        <caption class="sr-only">Compare One-Time Treatment, Quarterly, and Bi-Annual pest control plans</caption>
+        <colgroup>
+          <col class="pc-col--feature">
+          <col class="pc-col--plan">
+          <col class="pc-col--plan">
+          <col class="pc-col--plan">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th scope="col" class="pc-th pc-th--blank"></th>
+            <th scope="col" class="pc-th">
+              <div class="pc-th__wrap">
+                <span class="pc-plan">One-Time</span>
+                <span class="pc-note">Rapid Knockdown</span>
+              </div>
+            </th>
+            <th scope="col" class="pc-th pc-th--popular">
+              <div class="pc-th__wrap">
+                <span class="pc-badge">Most Popular</span>
+                <span class="pc-plan">Quarterly</span>
+                <span class="pc-note">Seasonal Defense</span>
+              </div>
+            </th>
+            <th scope="col" class="pc-th">
+              <div class="pc-th__wrap">
+                <span class="pc-plan">Bi-Annual</span>
+                <span class="pc-note">Low-Maintenance</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="pc-rowhead">Initial Knockdown</th>
+            <td class="pc-cell" data-plan="One-Time" aria-label="Initial Knockdown: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" data-plan="Quarterly" aria-label="Initial Knockdown: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" data-plan="Bi-Annual" aria-label="Initial Knockdown: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" class="pc-rowhead">Exterior Perimeter</th>
+            <td class="pc-cell" aria-label="Exterior Perimeter: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" aria-label="Exterior Perimeter: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" aria-label="Exterior Perimeter: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" class="pc-rowhead">Entry-Point Sealing</th>
+            <td class="pc-cell" aria-label="Entry-Point Sealing: optional">
+              <span class="pc-dash">—</span>
+            </td>
+            <td class="pc-cell" aria-label="Entry-Point Sealing: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" aria-label="Entry-Point Sealing: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" class="pc-rowhead">Free Re-Service</th>
+            <td class="pc-cell" aria-label="Free Re-Service: 30-day warranty">
+              <span class="pc-text">30-day warranty</span>
+            </td>
+            <td class="pc-cell" aria-label="Free Re-Service: included">
+              <svg class="pc-icon pc-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </td>
+            <td class="pc-cell" aria-label="Free Re-Service: extended window">
+              <span class="pc-text">Extended window</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" class="pc-rowhead">Visit Frequency</th>
+            <td class="pc-cell" aria-label="Visit Frequency: once">
+              <span class="pc-text">Once</span>
+            </td>
+            <td class="pc-cell" aria-label="Visit Frequency: every 3 months">
+              <span class="pc-text">Every 3 months</span>
+            </td>
+            <td class="pc-cell" aria-label="Visit Frequency: twice per year">
+              <span class="pc-text">Twice per year</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" class="pc-rowhead">Ideal For</th>
+            <td class="pc-cell">
+              <span class="pc-text">Urgent issues</span>
+            </td>
+            <td class="pc-cell">
+              <span class="pc-text">Ongoing prevention</span>
+            </td>
+            <td class="pc-cell">
+              <span class="pc-text">Low-pressure areas</span>
+            </td>
+          </tr>
+
+          <!-- CTA Row -->
+          <tr class="pc-cta-row">
+            <th scope="row" class="pc-rowhead sr-only">Select Plan</th>
+            <td class="pc-cell">
+              <a class="btn btn-ghost pc-btn" href="#contact" aria-label="Get a quote for One-Time">Get a Quote</a>
+            </td>
+            <td class="pc-cell">
+              <a class="btn btn-primary pc-btn" href="#contact" aria-label="Get a quote for Quarterly">Get a Quote</a>
+            </td>
+            <td class="pc-cell">
+              <a class="btn btn-ghost pc-btn" href="#contact" aria-label="Get a quote for Bi-Annual">Get a Quote</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+
+    <p class="pc-footnote">Warranty and services vary by structure and infestation. We’ll confirm on site and include everything in writing.</p>
+  </div>
+</section>
+
 
   <!-- Termite info anchor -->
   <section class="section section--alt" id="termite-info">
