@@ -758,9 +758,91 @@ a:focus, button:focus{
 .reviews{ grid-template-columns: repeat(3, minmax(0,1fr)) }
 .review{ font-style: italic }
 
-/* FAQ */
-.faq details summary{cursor:pointer; font-weight:700}
-.faq details + details{margin-top:12px}
+/* ===== FAQ (compact accordion list) ===== */
+.faq-band{
+  padding: clamp(32px, 6vw, 72px) 0;
+  background:
+    radial-gradient(60rem 60rem at 110% -20%, color-mix(in srgb, var(--primary) 8%, #fff), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--secondary) 8%, #fff), transparent) no-repeat,
+    linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
+}
+
+.faq-head{
+  text-align:center;
+  margin-bottom: clamp(14px, 3.2vw, 22px);
+}
+.faq-title{ margin:0 0 6px; font-size: clamp(22px, 3.2vw, 32px); }
+.faq-subtitle{ margin:0 auto; max-width:60ch; color: var(--muted); }
+
+/* List container (one clean shell, no cards per item) */
+.faq-list{
+  background:#fff;
+  border: 1px solid rgba(2,6,23,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow:hidden; /* rounds the top/bottom borders cleanly */
+}
+
+/* Each FAQ row */
+.faq-item{
+  border-bottom: 1px solid rgba(2,6,23,0.08);
+}
+.faq-item:last-of-type{ border-bottom: none; }
+
+/* Remove default marker */
+.faq-summary::-webkit-details-marker{ display:none; }
+.faq-summary{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px clamp(14px, 2vw, 18px);
+  cursor: pointer;
+  user-select: none;
+  font-weight: 800;                    /* bold question */
+  background: linear-gradient(180deg, #fff, #fff);
+  transition: background .2s ease;
+}
+.faq-summary:hover{ background: #fbfcfe; }
+.faq-summary:focus{
+  outline: 3px solid var(--secondary);
+  outline-offset: -3px; /* keep focus ring inside the rounded shell */
+}
+
+.faq-q{ margin-right: 12px; }
+
+/* Chevron */
+.faq-chevron{
+  width: 20px; height: 20px; stroke: var(--ink); fill: none; stroke-width: 2;
+  transition: transform .2s ease;
+}
+.faq-item[open] .faq-chevron{ transform: rotate(180deg); }
+
+/* Answer (compact, no giant padding) */
+.faq-answer{
+  padding: 0 clamp(14px, 2vw, 18px) 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-height: 0; overflow: hidden;
+  transition: max-height .28s ease;
+  /* optional faint top divider when open */
+  border-top: 1px dashed transparent;
+}
+.faq-item[open] .faq-answer{
+  max-height: 320px;                    /* enough for short answers */
+  border-top-color: rgba(2,6,23,0.08);
+}
+
+/* Footnote */
+.faq-footnote{
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+.faq-footnote a{ font-weight: 700; color: var(--ink); }
+
 
 /* Contact form */
 .form__grid{
