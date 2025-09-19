@@ -232,22 +232,56 @@
 
 
 
-  <!-- Before / After -->
-  <section class="section" id="before-after">
-    <div class="container">
-      <h2 class="section__title">Before &amp; After</h2>
-      <div class="grid ba-grid">
-        <figure class="card">
-          <img src="assets/before.jpg" alt="Before treatment: infestation evidence" width="640" height="420" loading="lazy">
-          <figcaption>Before</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/after.jpg" alt="After treatment: clean and pest-free" width="640" height="420" loading="lazy">
-          <figcaption>After</figcaption>
-        </figure>
-      </div>
+  <!-- Before & After -->
+<section class="ba" id="before-after" aria-labelledby="ba-title">
+  <div class="container">
+    <header class="ba__head">
+      <h2 class="ba__title" id="ba-title">Before &amp; After</h2>
+      <p class="ba__subtitle">Real results with family-safe, targeted treatments.</p>
+    </header>
+
+    <!-- Toggle for touch devices (CSS only) -->
+    <div class="ba__controls" role="group" aria-label="Toggle comparison">
+      <input type="checkbox" id="baToggle" class="ba__toggle" aria-label="Show Before image">
+      <label for="baToggle" class="chip ba__switch">
+        <span data-before>Before</span>
+        <span data-after>After</span>
+      </label>
     </div>
-  </section>
+
+    <!-- Framed comparison -->
+    <figure class="ba__frame">
+      <!-- AFTER image (base layer) -->
+      <img
+        src="assets/after.jpg"
+        alt="After treatment: clean, pest-free surface"
+        class="ba__img ba__img--after"
+        width="1200" height="800" loading="lazy">
+
+      <!-- BEFORE image (revealed via hover / toggle) -->
+      <img
+        src="assets/before.jpg"
+        alt="Before treatment: visible pest activity"
+        class="ba__img ba__img--before"
+        width="1200" height="800" loading="lazy">
+
+      <!-- Center guide (decorative) -->
+      <div class="ba__handle" aria-hidden="true">
+        <span class="ba__handle-bar"></span>
+      </div>
+
+      <!-- Labels pinned to corners -->
+      <figcaption class="ba__labels" aria-hidden="true">
+        <span class="ba__label ba__label--before">Before</span>
+        <span class="ba__label ba__label--after">After</span>
+      </figcaption>
+    </figure>
+
+    <!-- Optional note -->
+    <p class="ba__note">Images are representative; results vary by infestation and structure.</p>
+  </div>
+</section>
+
 
   <!-- Plans / Pricing -->
   <section class="section section--alt" id="pricing">
