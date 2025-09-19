@@ -1036,6 +1036,120 @@ a:focus, button:focus{
 }
 
 
+
+
+/* ===== Footer (inverted, matches Contact section) ===== */
+
+/* screen-reader utility (already used elsewhere in this doc) */
+.sr-only{
+  position:absolute!important; height:1px; width:1px; overflow:hidden;
+  clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+}
+
+.site-footer{
+  background:
+    radial-gradient(70rem 70rem at 120% -20%, color-mix(in srgb, var(--primary) 90%, #ffffff 10%), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--primary) 85%, #ffffff 15%), transparent) no-repeat,
+    var(--primary);
+  color: #fff;
+  border-top: 2px solid #ffffff;   /* requested white top border */
+  padding: clamp(28px, 5vw, 48px) 0 20px;
+}
+
+.site-footer a{
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.site-footer a:hover{ text-decoration: none; }
+
+.footer-wrap{
+  display: grid;
+  gap: clamp(18px, 3.5vw, 28px);
+  grid-template-columns: 1.2fr .8fr .8fr;
+  align-items: start;
+}
+
+.footer-brand{
+  display:flex; align-items:center; gap:10px; margin-bottom:6px;
+}
+.footer-nap{
+  font-style: normal;
+  margin: 0 0 6px;
+}
+.footer-tag{
+  margin: 0 0 12px;
+  color: color-mix(in srgb, #ffffff 85%, transparent);
+}
+
+/* Social placeholders */
+.footer-social{
+  display:flex; gap:10px; list-style:none; padding:0; margin:0;
+}
+.footer-social a{
+  display:inline-grid; place-items:center;
+  width:36px; height:36px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.85);
+  background: rgba(255,255,255,.06);
+}
+.footer-social svg{
+  width:18px; height:18px; fill:#fff;
+}
+
+/* Hours */
+.footer-head{
+  margin:0 0 8px; font-weight:800;
+}
+.footer-hours{
+  list-style:none; padding:0; margin:0 0 10px;
+  display:grid; gap:6px;
+}
+.footer-hours li{
+  display:flex; justify-content:space-between; gap:10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.footer-cta.btn{
+  border-color: rgba(255,255,255,.95);
+  color: #fff; background: transparent;
+}
+.footer-cta.btn:hover{ background: rgba(255,255,255,.1); }
+
+/* Quick links */
+.footer-links{
+  list-style:none; padding:0; margin:0 0 10px;
+  display:grid; gap:6px;
+}
+.footer-top{
+  display:inline-block; margin-top:6px;
+}
+
+/* Legal row */
+.footer-legal{
+  border-top: 1px dashed rgba(255,255,255,.28);
+  margin-top: clamp(18px, 3.5vw, 28px);
+  padding-top: 12px;
+  display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
+  color: color-mix(in srgb, #ffffff 85%, transparent);
+}
+.footer-disclaimer{ margin:0; }
+.footer-copy{ margin:0; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .footer-wrap{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px){
+  .footer-wrap{ grid-template-columns: 1fr; }
+  .footer-hours li{ padding: 8px 12px; }
+}
+
+
+
+
+
 /* Mobile action dock */
 .mobile-dock{
   position: fixed;
