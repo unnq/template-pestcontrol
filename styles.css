@@ -932,36 +932,109 @@ a:focus, button:focus{
 .faq-footnote a{ font-weight: 700; color: var(--ink); }
 
 
-/* Contact form */
-.form__grid{
-  grid-template-columns: repeat(2, minmax(0,1fr));
+/* ===== Contact / Booking (Inverted) ===== */
+.contact-invert{
+  padding: clamp(36px, 6vw, 80px) 0;
+  color: #fff;
+  background:
+    radial-gradient(70rem 70rem at 120% -20%, color-mix(in srgb, var(--primary) 90%, #ffffff 10%), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--primary) 85%, #ffffff 15%), transparent) no-repeat,
+    var(--primary);
 }
-.field{display:flex; flex-direction:column; gap:6px}
-.field span, .field legend{font-weight:600}
-.field input, .field select, .field textarea{
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-  padding:10px 12px;
-  font: inherit;
-}
-.field textarea{resize:vertical}
-.field--full{grid-column: 1 / -1}
-.inline{display:flex; gap:18px; align-items:center}
-.form__actions{display:flex; gap:12px; align-items:center; margin-top:10px}
-.form__note{font-size:14px; color:var(--muted)}
-.form__errors{margin-top:12px; color:#b91c1c; font-weight:700}
 
-/* Footer */
-.footer{background:#0f172a; color:#e5e7eb; padding-top:32px}
-.footer a{color:#e5e7eb}
-.footer__grid{display:grid; gap:24px; grid-template-columns: 1.2fr .8fr .8fr}
-.footer__links{list-style:none; padding:0; margin:0; display:grid; gap:6px}
-.footer__legal{
-  border-top:1px dashed rgba(255,255,255,.2);
-  padding:14px 0 24px; margin-top:20px;
-  display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
+.contact-invert a{ color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.contact-invert a:hover{ text-decoration: none; }
+
+.contact-invert__grid{
+  display: grid;
+  gap: clamp(20px, 4vw, 40px);
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
 }
-.footer .brand__name{margin:0 0 6px}
+
+.contact-invert__title{
+  margin: 0 0 8px;
+  font-size: clamp(22px, 3.4vw, 34px);
+  letter-spacing: .2px;
+}
+.contact-invert__subtitle{
+  margin: 0 0 12px;
+  color: color-mix(in srgb, #ffffff 88%, transparent);
+  max-width: 55ch;
+}
+.contact-invert__highlights{
+  display: flex; flex-wrap: wrap; gap: 8px;
+  list-style: none; padding: 0; margin: 8px 0 16px;
+}
+.contact-invert .chip{
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.28);
+  color: #fff;
+}
+
+.contact-invert__quick{
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 8px;
+}
+.contact-invert__note{
+  margin: 8px 0 0;
+  color: color-mix(in srgb, #ffffff 85%, transparent);
+}
+
+/* Invert buttons inside this section */
+.contact-invert .btn-primary{
+  background: #fff; color: var(--primary);
+  border-color: #fff;
+}
+.contact-invert .btn-primary:hover{
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+.contact-invert .btn-ghost{
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.9);
+}
+.contact-invert .btn-ghost:hover{
+  background: rgba(255,255,255,.1);
+}
+
+/* The form stays a white card for legibility */
+.contact-invert__form{
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid rgba(2,6,23,0.06);
+  box-shadow: var(--shadow);
+}
+
+/* Inputs inside the inverted section’s form (reuse your base styles, just ensure contrast) */
+.contact-invert__form .field input,
+.contact-invert__form .field select,
+.contact-invert__form .field textarea{
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: var(--ink);
+}
+.contact-invert__form .field input::placeholder,
+.contact-invert__form .field textarea::placeholder{
+  color: #9aa2ad;
+}
+.contact-invert__form .field input:focus,
+.contact-invert__form .field select:focus,
+.contact-invert__form .field textarea:focus{
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+.contact-invert__form .inline input[type="radio"]{
+  accent-color: var(--primary);
+}
+
+/* Keep your existing .form__grid/.form__actions/.form__note styles; this adds spacing harmony */
+.contact-invert__form .form__actions .btn{ min-width: 160px; }
+
+/* Responsive */
+@media (max-width: 960px){
+  .contact-invert__grid{ grid-template-columns: 1fr; }
+}
+
 
 /* Mobile action dock */
 .mobile-dock{
