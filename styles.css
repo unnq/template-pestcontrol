@@ -2,8 +2,8 @@
    Design Tokens
    ========================= */
 :root{
-  --primary: {{PRIMARY_COLOR}};            /* royal blue */
-  --secondary: {{SECONDARY_COLOR}};        /* safety green */
+  --primary: #4169E1;    /* royal blue */
+  --secondary: #43B02A;  /* safety green */
   --accent: #f2f1f0;
   --ink: #1b1b1c;
   --muted: #6b7280;
