@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{BUSINESS_NAME}} | Fast, Safe, Guaranteed Pest Control in {{CITY}}</title>
+  <meta name="description" content="Same-day, family-safe pest control in {{CITY}}. Licensed & insured. Ants, roaches, rodents, spiders, termites, wasps. Call {{PHONE}} for rapid service." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BUSINESS_NAME}} — Fast, Safe, Guaranteed Pest Control" />
+  <meta property="og:description" content="Same-day appointments in {{CITY}}. Family-safe, licensed & insured, 5-star rated." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{CTA_URL}}" />
+  <meta property="og:image" content="assets/og-placeholder.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PlayfairDisplay-Variable.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <!-- Mobile persistent action bar -->
+  <div class="mobile-dock" role="region" aria-label="Mobile actions">
+    <a class="btn btn-call" href="tel:{{PHONE}}" aria-label="Call {{BUSINESS_NAME}} now">Call Now</a>
+    <a class="btn btn-quote" href="#contact" aria-label="Get a quote">Get a Quote</a>
+  </div>
+
+  <!-- Sticky nav -->
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Primary">
+      <a href="#" class="brand" aria-label="{{BUSINESS_NAME}} home">
+        <span class="brand__logo" aria-hidden="true">🛡️</span>
+        <span class="brand__name">{{BUSINESS_NAME}}</span>
+      </a>
+      <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="navMenu">Menu</button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#pricing">Plans</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn-ghost" href="#contact">Get a Quote</a>
+        <a class="btn btn-primary" href="tel:{{PHONE}}" aria-label="Call {{BUSINESS_NAME}}">{{PHONE}}</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container" id="home">
+    <div class="hero__copy">
+      <h1 class="hero__title">Fast, Safe, Guaranteed Pest Control.</h1>
+      <p class="hero__subtitle">Same-Day Appointments Available in {{CITY}}.</p>
+      <div class="hero__ctas">
+        <a class="btn btn-primary" href="tel:{{PHONE}}">Call Now</a>
+        <a class="btn btn-ghost" href="#contact">Get a Quote</a>
+      </div>
+      <ul class="chips">
+        <li class="chip">Years in Business: <strong>10+</strong></li>
+        <li class="chip">Licensed &amp; Insured</li>
+        <li class="chip">5-Star Rated</li>
+      </ul>
+    </div>
+    <figure class="hero__media">
+      <img src="assets/hero-pest.jpg" alt="Technician performing safe pest control" width="960" height="720" loading="lazy">
+    </figure>
+
+    <!-- Floating emergency badge -->
+    <a href="tel:{{PHONE}}" class="badge-floating" aria-label="Same-Day service, tap to call">
+      <span class="badge-dot" aria-hidden="true"></span>
+      Same-Day
+    </a>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section__title">Pest Control Services</h2>
+      <div class="grid services">
+        <article class="card service">
+          <div class="service__icon" aria-label="Ant control">
+            <!-- Ant icon -->
+            <svg viewBox="0 0 24 24" role="img" aria-label="Ant" focusable="false"><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm6.5 4h-2.3l-1.2-2h1.5a1 1 0 1 0 0-2h-2.1l-.9-1.6a3.96 3.96 0 0 0-2 0L8.6 10H6.5a1 1 0 1 0 0 2H8l-1.2 2H4.5a1 1 0 1 0 0 2h1.5l-1.1 2a1 1 0 0 0 1.8.9l1.4-2.6h8.8l1.4 2.6a1 1 0 0 0 1.8-.9l-1.1-2h1.5a1 1 0 1 0 0-2Z"/></svg>
+          </div>
+          <h3>Ants</h3>
+          <p>Targeted perimeter and interior treatments to eliminate colonies and stop re-entry.</p>
+        </article>
+
+        <article class="card service">
+          <div class="service__icon" aria-label="Roach control">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Roach" focusable="false"><path d="M12 3c-1.7 0-3 1.8-3 4v2H7a1 1 0 1 0 0 2h2v2.1L7.7 15a1 1 0 1 0 1.2 1.6l2.1-1.6V18a1 1 0 1 0 2 0v-3l2.1 1.6a1 1 0 0 0 1.2-1.6L15 13.1V11h2a1 1 0 1 0 0-2h-2V7c0-2.2-1.3-4-3-4Z"/></svg>
+          </div>
+          <h3>Roaches</h3>
+          <p>Crack-and-crevice treatment and sanitation guidance for long-term protection.</p>
+        </article>
+
+        <article class="card service">
+          <div class="service__icon" aria-label="Rodent control">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Rodent" focusable="false"><path d="M19 8a5 5 0 0 0-9.6-2.2A6 6 0 0 0 5 11v3h2v-3a4 4 0 1 1 8 0v3h2v-2h2V8h0Z"/></svg>
+          </div>
+          <h3>Rodents</h3>
+          <p>Exclusion, trapping, and sanitation to seal entry points and remove activity.</p>
+        </article>
+
+        <article class="card service">
+          <div class="service__icon" aria-label="Spider control">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Spider" focusable="false"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-8 2h3v2H4v-2Zm13 0h3v2h-3v-2ZM6 5l2 2-1 1-2-2 1-1Zm10 0 1 1-2 2-1-1 2-2ZM6 19l-1-1 2-2 1 1-2 2Zm11-3 2 2-1 1-2-2 1-1Z"/></svg>
+          </div>
+          <h3>Spiders</h3>
+          <p>Web knockdown and exterior treatments that keep spiders away from your home.</p>
+        </article>
+
+        <article class="card service">
+          <div class="service__icon" aria-label="Termite control">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Termite" focusable="false"><path d="M12 2a2 2 0 0 0-2 2v2h4V4a2 2 0 0 0-2-2Zm-3 6v2l-2 2 2 2v6a1 1 0 1 0 2 0v-6l1-1 1 1v6a1 1 0 1 0 2 0v-6l2-2-2-2V8H9Z"/></svg>
+          </div>
+          <h3><a href="#termite-info">Termites</a></h3>
+          <p>Comprehensive inspections and treatments to protect structures from damage.</p>
+        </article>
+
+        <article class="card service">
+          <div class="service__icon" aria-label="Wasp control">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Wasps" focusable="false"><path d="M12 3c-1.1 0-2 .9-2 2v3H8l-2 2 2 2h2v3a2 2 0 1 0 4 0v-3h2l2-2-2-2h-2V5c0-1.1-.9-2-2-2Z"/></svg>
+          </div>
+          <h3>Wasps</h3>
+          <p>Nest removal and preventative treatments with clear safety perimeters.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section--alt" id="why">
+    <div class="container">
+      <h2 class="section__title">Why {{BUSINESS_NAME}}?</h2>
+      <ul class="why grid">
+        <li class="card">
+          <strong>Family-Safe Treatments</strong>
+          <p>Low-odor, targeted applications with safety protocols for kids & pets.</p>
+        </li>
+        <li class="card">
+          <strong>Licensed &amp; Insured</strong>
+          <p>Fully compliant, background-checked technicians, and documented service.</p>
+        </li>
+        <li class="card">
+          <strong>Same-Day Service</strong>
+          <p>Fast dispatch and on-time arrival windows—no waiting around.</p>
+        </li>
+        <li class="card">
+          <strong>5-Star Support</strong>
+          <p>Clear communication, clean work, and guaranteed follow-ups.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="section" id="before-after">
+    <div class="container">
+      <h2 class="section__title">Before &amp; After</h2>
+      <div class="grid ba-grid">
+        <figure class="card">
+          <img src="assets/before.jpg" alt="Before treatment: infestation evidence" width="640" height="420" loading="lazy">
+          <figcaption>Before</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/after.jpg" alt="After treatment: clean and pest-free" width="640" height="420" loading="lazy">
+          <figcaption>After</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans / Pricing -->
+  <section class="section section--alt" id="pricing">
+    <div class="container">
+      <h2 class="section__title">Plans for Every Need</h2>
+      <div class="grid plans">
+        <article class="card plan">
+          <h3>One-Time Treatment</h3>
+          <ul>
+            <li>Rapid knockdown</li>
+            <li>Problem-area focus</li>
+            <li>30-day warranty</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        </article>
+        <article class="card plan">
+          <h3>Quarterly</h3>
+          <ul>
+            <li>Seasonal protection</li>
+            <li>Exterior perimeter</li>
+            <li>Free re-service</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        </article>
+        <article class="card plan">
+          <h3>Bi-Annual</h3>
+          <ul>
+            <li>Twice-yearly treatments</li>
+            <li>Entry-point sealing</li>
+            <li>Extended warranty</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2 class="section__title">What Customers Say</h2>
+      <div class="grid reviews">
+        <blockquote class="card review">
+          <p>“Called at 9am, tech arrived by noon. Courteous and thorough—no more ants.”</p>
+          <footer>— Alex R.</footer>
+        </blockquote>
+        <blockquote class="card review">
+          <p>“They explained everything and used pet-safe products. Huge relief.”</p>
+          <footer>— Priya S.</footer>
+        </blockquote>
+        <blockquote class="card review">
+          <p>“Booked same-day for a wasp nest. Fast, clean, and guaranteed.”</p>
+          <footer>— Marcus D.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Termite info anchor -->
+  <section class="section section--alt" id="termite-info">
+    <div class="container">
+      <h2 class="section__title">Termite Protection</h2>
+      <p>We perform detailed inspections, identify species, and create a targeted treatment plan to protect your structure.</p>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section" id="areas">
+    <div class="container">
+      <h2 class="section__title">Service Areas</h2>
+      <p>We serve: <strong>{{SERVICE_AREAS}}</strong></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <h2 class="section__title">FAQ</h2>
+      <div class="faq">
+        <details class="card">
+          <summary>Are your treatments safe?</summary>
+          <p>Yes. We use targeted applications and follow strict label protocols for safe, effective control.</p>
+        </details>
+        <details class="card">
+          <summary>Is it safe for pets?</summary>
+          <p>We advise keeping pets away from treated areas until dry (usually 30–60 minutes). Then normal activity is fine.</p>
+        </details>
+        <details class="card">
+          <summary>Do you offer a warranty?</summary>
+          <p>Yes. Most services include a re-service warranty. If pests return within the window, we come back at no charge.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Booking -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__title">Get Your Same-Day Quote</h2>
+      <form class="card form" novalidate data-form>
+        <div class="grid form__grid">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span>Phone</span>
+            <input type="tel" name="phone" inputmode="tel" placeholder="(###) ###-####" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span>Service Type</span>
+            <select name="service" required>
+              <option value="">Select…</option>
+              <option>Ants</option>
+              <option>Roaches</option>
+              <option>Rodents</option>
+              <option>Spiders</option>
+              <option>Termites</option>
+              <option>Wasps</option>
+            </select>
+          </label>
+          <fieldset class="field">
+            <legend>Preferred Time</legend>
+            <div class="inline">
+              <label><input type="radio" name="time" value="AM" required /> AM</label>
+              <label><input type="radio" name="time" value="PM" /> PM</label>
+            </div>
+          </fieldset>
+          <label class="field field--full">
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us about the issue…"></textarea>
+          </label>
+        </div>
+        <div class="form__actions">
+          <button class="btn btn-primary" type="submit">Request Quote</button>
+          <a class="btn btn-ghost" href="tel:{{PHONE}}">Or Call {{PHONE}}</a>
+        </div>
+        <p class="form__note">By submitting, you agree to be contacted at the details provided.</p>
+        <div class="form__errors" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="brand__name">{{BUSINESS_NAME}}</h3>
+        <p>{{ADDRESS}}</p>
+        <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a> • <a href="tel:{{PHONE}}">{{PHONE}}</a></p>
+        <p>Licensed &amp; Insured • Serving {{CITY}} and surrounding areas.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Hours</h4>
+        <p>Mon–Sat: 8am–6pm<br/>Sun: By Appointment</p>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Plans</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <p class="footer__disclaimer">Disclaimer: This website may contain placeholders. All work quoted after on-site assessment.</p>
+      <p>&copy; <span data-year></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PestControl",
+    "name": "{{BUSINESS_NAME}}",
+    "telephone": "{{PHONE}}",
+    "email": "{{EMAIL}}",
+    "address": "{{ADDRESS}}",
+    "areaServed": "{{SERVICE_AREAS}}",
+    "url": "{{CTA_URL}}",
+    "image": "assets/og-placeholder.jpg",
+    "description": "Fast, safe, guaranteed pest control with same-day appointments in {{CITY}}.",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
