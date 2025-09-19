@@ -169,7 +169,7 @@ a:focus, button:focus{
   gap: clamp(20px, 4vw, 40px);
   align-items:center;
   padding: clamp(24px, 4vw, 48px) 0; 
-  margin: 0 4vw;
+  margin: 0 6vw;
 }
 .hero__title{
   font-size: clamp(28px, 5vw, 48px);
@@ -1056,6 +1056,7 @@ a:focus, button:focus{
   color: #fff;
   border-top: 2px solid #ffffff;   /* requested white top border */
   padding: clamp(28px, 5vw, 48px) 0 20px;
+  margin: 0 6vw;
 }
 
 .site-footer a{
