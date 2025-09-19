@@ -676,33 +676,63 @@
 
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__col">
+<footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
+  <h2 id="footer-title" class="sr-only">Website Footer</h2>
+  <div class="container footer-wrap">
+    <!-- Brand / NAP -->
+    <div class="footer-col">
+      <div class="footer-brand">
+        <span class="brand__logo" aria-hidden="true">🛡️</span>
         <h3 class="brand__name">{{BUSINESS_NAME}}</h3>
-        <p>{{ADDRESS}}</p>
-        <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a> • <a href="tel:{{PHONE}}">{{PHONE}}</a></p>
-        <p>Licensed &amp; Insured • Serving {{CITY}} and surrounding areas.</p>
       </div>
-      <div class="footer__col">
-        <h4>Hours</h4>
-        <p>Mon–Sat: 8am–6pm<br/>Sun: By Appointment</p>
-      </div>
-      <div class="footer__col">
-        <h4>Quick Links</h4>
-        <ul class="footer__links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Plans</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Get a Quote</a></li>
-        </ul>
-      </div>
+      <address class="footer-nap">
+        <span class="footer-address">{{ADDRESS}}</span><br>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> • <a href="tel:{{PHONE}}">{{PHONE}}</a>
+      </address>
+      <p class="footer-tag">Licensed &amp; Insured • Serving {{CITY}} and surrounding areas.</p>
+
+      <ul class="footer-social" role="list" aria-label="Social links">
+        <li><a href="#" aria-label="Google profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#0a0a0a" font-family="Inter, Arial, sans-serif">G</text></svg>
+        </a></li>
+        <li><a href="#" aria-label="Yelp profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#0a0a0a" font-family="Inter, Arial, sans-serif">Y</text></svg>
+        </a></li>
+        <li><a href="#" aria-label="Facebook profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#0a0a0a" font-family="Inter, Arial, sans-serif">f</text></svg>
+        </a></li>
+      </ul>
     </div>
-    <div class="container footer__legal">
-      <p class="footer__disclaimer">Disclaimer: This website may contain placeholders. All work quoted after on-site assessment.</p>
-      <p>&copy; <span data-year></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+
+    <!-- Hours -->
+    <div class="footer-col">
+      <h4 class="footer-head">Hours</h4>
+      <ul class="footer-hours">
+        <li><span>Mon–Sat</span><span>8am–6pm</span></li>
+        <li><span>Sun</span><span>By Appointment</span></li>
+      </ul>
+      <a class="footer-cta btn btn-ghost" href="tel:{{PHONE}}" aria-label="Call {{BUSINESS_NAME}} now">Call {{PHONE}}</a>
     </div>
-  </footer>
+
+    <!-- Quick Links -->
+    <nav class="footer-col" aria-label="Footer navigation">
+      <h4 class="footer-head">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Plans</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+      <a class="footer-top" href="#home" aria-label="Back to top">↑ Back to top</a>
+    </nav>
+  </div>
+
+  <div class="container footer-legal">
+    <p class="footer-disclaimer">Disclaimer: This website may contain placeholders. All work quoted after on-site assessment.</p>
+    <p class="footer-copy">&copy; <span data-year></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+  </div>
+</footer>
+
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
