@@ -600,57 +600,80 @@
 </section>
 
 
-  <!-- Contact / Booking -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2 class="section__title">Get Your Same-Day Quote</h2>
-      <form class="card form" novalidate data-form>
-        <div class="grid form__grid">
-          <label class="field">
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-          <label class="field">
-            <span>Phone</span>
-            <input type="tel" name="phone" inputmode="tel" placeholder="(###) ###-####" required />
-          </label>
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label class="field">
-            <span>Service Type</span>
-            <select name="service" required>
-              <option value="">Select…</option>
-              <option>Ants</option>
-              <option>Roaches</option>
-              <option>Rodents</option>
-              <option>Spiders</option>
-              <option>Termites</option>
-              <option>Wasps</option>
-            </select>
-          </label>
-          <fieldset class="field">
-            <legend>Preferred Time</legend>
-            <div class="inline">
-              <label><input type="radio" name="time" value="AM" required /> AM</label>
-              <label><input type="radio" name="time" value="PM" /> PM</label>
-            </div>
-          </fieldset>
-          <label class="field field--full">
-            <span>Message</span>
-            <textarea name="message" rows="4" placeholder="Tell us about the issue…"></textarea>
-          </label>
-        </div>
-        <div class="form__actions">
-          <button class="btn btn-primary" type="submit">Request Quote</button>
-          <a class="btn btn-ghost" href="tel:{{PHONE}}">Or Call {{PHONE}}</a>
-        </div>
-        <p class="form__note">By submitting, you agree to be contacted at the details provided.</p>
-        <div class="form__errors" aria-live="polite"></div>
-      </form>
+  <!-- Contact / Booking (Inverted) -->
+<section class="contact-invert" id="contact" aria-labelledby="contact-title">
+  <div class="container contact-invert__grid">
+    <!-- Lead / Trust column -->
+    <div class="contact-invert__lead">
+      <h2 class="contact-invert__title" id="contact-title">Get Your Same-Day Quote</h2>
+      <p class="contact-invert__subtitle">
+        Fast dispatch across {{CITY}}. Family-safe treatments and a real warranty.
+      </p>
+
+      <ul class="contact-invert__highlights" role="list">
+        <li class="chip">Licensed &amp; Insured</li>
+        <li class="chip">Family-Safe</li>
+        <li class="chip">5-Star Rated</li>
+      </ul>
+
+      <div class="contact-invert__quick">
+        <a class="btn btn-ghost" href="tel:{{PHONE}}" aria-label="Call {{BUSINESS_NAME}} now">Call {{PHONE}}</a>
+        <a class="btn btn-primary" href="#contact" aria-label="Get a quote form">Get a Quote</a>
+      </div>
+
+      <p class="contact-invert__note">Prefer email? <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
     </div>
-  </section>
+
+    <!-- Form column -->
+    <form class="card form contact-invert__form" novalidate data-form>
+      <div class="grid form__grid">
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input type="tel" name="phone" inputmode="tel" placeholder="(###) ###-####" required />
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label class="field">
+          <span>Service Type</span>
+          <select name="service" required>
+            <option value="">Select…</option>
+            <option>Ants</option>
+            <option>Roaches</option>
+            <option>Rodents</option>
+            <option>Spiders</option>
+            <option>Termites</option>
+            <option>Wasps</option>
+          </select>
+        </label>
+        <fieldset class="field">
+          <legend>Preferred Time</legend>
+          <div class="inline">
+            <label><input type="radio" name="time" value="AM" required /> AM</label>
+            <label><input type="radio" name="time" value="PM" /> PM</label>
+          </div>
+        </fieldset>
+        <label class="field field--full">
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Tell us about the issue…"></textarea>
+        </label>
+      </div>
+
+      <div class="form__actions">
+        <button class="btn btn-primary" type="submit">Request Quote</button>
+        <a class="btn btn-ghost" href="tel:{{PHONE}}">Or Call {{PHONE}}</a>
+      </div>
+      <p class="form__note">By submitting, you agree to be contacted at the details provided.</p>
+      <div class="form__errors" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="footer">
