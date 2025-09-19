@@ -466,25 +466,59 @@
 
 
   <!-- FAQ -->
-  <section class="section section--alt" id="faq">
-    <div class="container">
-      <h2 class="section__title">FAQ</h2>
-      <div class="faq">
-        <details class="card">
-          <summary>Are your treatments safe?</summary>
+<section class="faq-band" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="faq-head">
+      <h2 class="faq-title" id="faq-title">FAQ</h2>
+      <p class="faq-subtitle">Quick answers about safety, pets, and our warranty.</p>
+    </header>
+
+    <div class="faq-list" role="list">
+      <!-- 1. Safety -->
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-q">Are your treatments safe?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-answer">
           <p>Yes. We use targeted applications and follow strict label protocols for safe, effective control.</p>
-        </details>
-        <details class="card">
-          <summary>Is it safe for pets?</summary>
-          <p>We advise keeping pets away from treated areas until dry (usually 30–60 minutes). Then normal activity is fine.</p>
-        </details>
-        <details class="card">
-          <summary>Do you offer a warranty?</summary>
+        </div>
+      </details>
+
+      <!-- 2. Pet safety -->
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-q">Is it safe for pets?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Keep pets away from treated areas until dry (typically 30–60 minutes). After drying, normal activity is fine.</p>
+        </div>
+      </details>
+
+      <!-- 3. Warranty -->
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-q">Do you offer a warranty?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="faq-answer">
           <p>Yes. Most services include a re-service warranty. If pests return within the window, we come back at no charge.</p>
-        </details>
-      </div>
+        </div>
+      </details>
     </div>
-  </section>
+
+    <!-- Optional micro-CTA under the list -->
+    <p class="faq-footnote">Still have a question? <a href="#contact">Ask us for details</a> or call <a href="tel:{{PHONE}}">{{PHONE}}</a>.</p>
+  </div>
+</section>
+
 
   <!-- Contact / Booking -->
   <section class="section" id="contact">
