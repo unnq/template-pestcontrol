@@ -92,6 +92,7 @@ body{
   position: relative;              /* anchor the dropdown */
   display: flex; align-items: center; gap: 16px;
   padding: 12px 0;
+  margin: 0 4vw;
 }
 
 .brand{
