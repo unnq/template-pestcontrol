@@ -427,21 +427,43 @@
 </section>
 
 
-  <!-- Termite info anchor -->
-  <section class="section section--alt" id="termite-info">
-    <div class="container">
-      <h2 class="section__title">Termite Protection</h2>
-      <p>We perform detailed inspections, identify species, and create a targeted treatment plan to protect your structure.</p>
-    </div>
-  </section>
 
-  <!-- Service Areas -->
-  <section class="section" id="areas">
-    <div class="container">
-      <h2 class="section__title">Service Areas</h2>
-      <p>We serve: <strong>{{SERVICE_AREAS}}</strong></p>
-    </div>
-  </section>
+ <!-- Service Areas -->
+<section class="areas-band" id="areas" aria-labelledby="areas-title">
+  <div class="container">
+    <header class="areas-head">
+      <span class="areas-pin" aria-hidden="true">
+        <!-- Map pin -->
+        <svg viewBox="0 0 24 24" role="img" aria-label="Map pin" focusable="false">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+        </svg>
+      </span>
+      <div>
+        <h2 class="areas-title" id="areas-title">Service Areas</h2>
+        <p class="areas-subtitle">Fast, same-day availability across {{CITY}} and nearby neighborhoods.</p>
+      </div>
+    </header>
+
+    <!-- Option A: Chip list (recommended). Replace items with your actual areas. -->
+    <ul class="areas-list" role="list" aria-label="Neighborhoods and cities we serve">
+      <!-- Replace these <li> with your real areas -->
+      <li class="chip">{{CITY}} Central</li>
+      <li class="chip">{{CITY}} West</li>
+      <li class="chip">{{CITY}} East</li>
+      <li class="chip">Downtown</li>
+      <li class="chip">Midtown</li>
+      <li class="chip">North {{CITY}}</li>
+      <li class="chip">South {{CITY}}</li>
+      <li class="chip">Lakeside</li>
+      <li class="chip">Canyon Park</li>
+      <li class="chip">Riverside</li>
+    </ul>
+
+    <!-- Option B: Simple text fallback (keep or remove). -->
+    <p class="areas-fallback">Also serving: <strong>{{SERVICE_AREAS}}</strong></p>
+  </div>
+</section>
+
 
   <!-- FAQ -->
   <section class="section section--alt" id="faq">
