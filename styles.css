@@ -327,110 +327,103 @@ a:focus, button:focus{
 }
 
 
-/* ===== Why Choose Us (distinct band) ===== */
-.why-band{
-  position: relative;
+/* ===== Why Choose Us (divider strip, no cards) ===== */
+.why-strip{
   padding: clamp(36px, 6vw, 80px) 0;
-  /* soft contrast band with subtle pattern */
   background:
-    radial-gradient(60rem 60rem at 120% -20%, rgba(65,105,225,0.06), transparent) no-repeat,
-    radial-gradient(40rem 40rem at -30% 120%, rgba(67,176,42,0.06), transparent) no-repeat,
-    linear-gradient(180deg, #f6f8fc 0%, #ffffff 100%);
-  overflow: hidden;
+    radial-gradient(70rem 70rem at 110% -20%, color-mix(in srgb, var(--primary) 10%, #fff), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--secondary) 10%, #fff), transparent) no-repeat,
+    linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
 }
 
-.why-band__grid{
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(20px, 4vw, 56px);
-  align-items: start;
+.why-strip__head{
+  text-align: center;
+  margin-bottom: clamp(18px, 3.5vw, 28px);
 }
-
-.why-band__head{
-  position: relative;
-  background: #fff;
-  border: 1px solid rgba(2,6,23,0.06);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: clamp(16px, 2.5vw, 28px);
-  /* decorative left edge */
-  box-shadow:
-    inset 4px 0 0 0 var(--primary),
-    var(--shadow);
-}
-
-.why-band__title{
+.why-strip__title{
   margin: 0 0 6px;
   font-size: clamp(22px, 3.2vw, 32px);
 }
-.why-band__subtitle{
-  margin: 0;
+.why-strip__subtitle{
+  margin: 0 auto;
   color: var(--muted);
-  max-width: 40ch;
+  max-width: 60ch;
 }
-.why-band__badges{
-  margin: 12px 0 0;
-  display: flex; flex-wrap: wrap; gap: 8px;
+.why-strip__guarantee{
+  margin: 12px auto 0;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
   list-style: none; padding: 0;
 }
 
-/* reasons list (staggered checklist) */
-.reasons{
+/* horizontal points with vertical dividers; no boxes */
+.why-points{
+  margin: clamp(16px, 3vw, 28px) 0 0;
+  padding: 0;
   list-style: none;
-  margin: 0; padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap);
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 0;                          /* seamless strip */
+  border-top: 1px solid rgba(2,6,23,0.08);
+  border-bottom: 1px solid rgba(2,6,23,0.08);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.8));
 }
 
-.reason{
-  position: relative;
+.why-point{
   display: grid;
-  grid-template-columns: 52px 1fr;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
   gap: 12px;
-  background: #fff;
-  border: 1px solid rgba(2,6,23,0.06);
-  border-left: 4px solid var(--secondary);     /* green accent (differs from services) */
-  border-radius: var(--radius);
-  padding: 14px;
-  box-shadow: var(--shadow);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  padding: 18px clamp(12px, 2vw, 18px);
+  position: relative;
 }
-.reason:nth-child(odd){ transform: translateY(0) }
-.reason:nth-child(even){ transform: translateY(6px) } /* subtle stagger */
-.reason:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.10);
-  border-color: color-mix(in srgb, var(--secondary) 80%, #fff);
+.why-point:not(:last-child){
+  border-right: 1px solid rgba(2,6,23,0.08);  /* dividers instead of cards */
 }
 
-.reason__icon{
-  width: 52px; height: 52px;
-  border-radius: 12px;
+.why-point__icon{
+  width: 56px; height: 56px;
+  border-radius: 999px;
   display: grid; place-items: center;
   background:
-    linear-gradient(145deg, rgba(67,176,42,0.12), rgba(65,105,225,0.12));
-  box-shadow: inset 0 0 0 2px rgba(0,0,0,.04);
+    conic-gradient(from 0deg, var(--primary), var(--secondary), var(--primary));
+  -webkit-mask: radial-gradient(#000 68%, transparent 70%); /* ring effect */
+          mask: radial-gradient(#000 68%, transparent 70%);
+  /* inner plate */
+  position: relative;
 }
-.reason__icon svg{ width: 28px; height: 28px; fill: var(--ink); }
+.why-point__icon::after{
+  content: "";
+  position: absolute; inset: 6px;
+  background: #fff; border-radius: 999px;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
+}
+.why-point__icon svg{
+  width: 26px; height: 26px; z-index: 1; position: relative;
+  fill: var(--ink);
+}
 
-.reason__body h3{
+.why-point__body h3{
   margin: 2px 0 4px;
-  font-size: clamp(16px, 2.2vw, 18px);
+  font-size: clamp(16px, 2.1vw, 18px);
 }
-.reason__body p{
-  margin: 0;
-  color: var(--muted);
+.why-point__body p{
+  margin: 0; color: var(--muted);
 }
 
 /* responsive */
-@media (max-width: 1024px){
-  .why-band__grid{ grid-template-columns: 1fr; }
+@media (max-width: 960px){
+  .why-points{ grid-template-columns: 1fr 1fr; }
+  .why-point:nth-child(odd){ border-right: 1px solid rgba(2,6,23,0.08); }
+  .why-point:nth-child(even){ border-right: none; }
+  .why-point{ border-bottom: 1px solid rgba(2,6,23,0.08); }
+  .why-point:last-child{ border-bottom: none; }
 }
-@media (max-width: 640px){
-  .reasons{ grid-template-columns: 1fr; }
-  .reason:nth-child(even){ transform: translateY(0) } /* remove stagger on small screens */
+@media (max-width: 560px){
+  .why-points{ grid-template-columns: 1fr; }
+  .why-point{ border-right: none; }
 }
+
 
 
 /* Before/After */
