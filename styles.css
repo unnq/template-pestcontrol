@@ -425,10 +425,117 @@ a:focus, button:focus{
 
 
 
-/* Before/After */
-.ba-grid{ grid-template-columns: repeat(2, minmax(0,1fr)) }
-.ba-grid figure{overflow:hidden}
-.ba-grid img{width:100%; height:auto; display:block; border-radius: 10px}
+/* ===== Before & After (framed comparison, CSS-only) ===== */
+.ba{
+  padding: clamp(36px, 6vw, 80px) 0;
+  background:
+    radial-gradient(60rem 60rem at 110% -20%, color-mix(in srgb, var(--primary) 8%, #fff), transparent) no-repeat,
+    radial-gradient(50rem 50rem at -20% 120%, color-mix(in srgb, var(--secondary) 8%, #fff), transparent) no-repeat,
+    linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.ba__head{ text-align:center; margin-bottom: clamp(16px, 3vw, 24px); }
+.ba__title{ margin:0 0 6px; font-size: clamp(22px, 3.2vw, 32px); }
+.ba__subtitle{ margin:0 auto; max-width: 60ch; color: var(--muted); }
+
+/* Toggle control (for touch) */
+.ba__controls{ display:flex; justify-content:center; margin-bottom: 12px; }
+.ba__toggle{ position:absolute; opacity:0; pointer-events:none; }
+.ba__switch{
+  display:inline-flex; gap:10px; align-items:center;
+  cursor:pointer; user-select:none;
+  padding:8px 10px; border-radius:999px; background: #fff;
+  border:1px solid #e5e7eb; box-shadow: var(--shadow);
+}
+.ba__switch [data-before], .ba__switch [data-after]{ font-weight:700; }
+.ba__toggle:not(:checked) + .ba__switch [data-before]{ color: var(--ink); }
+.ba__toggle:not(:checked) + .ba__switch [data-after]{ color: var(--muted); }
+.ba__toggle:checked + .ba__switch [data-before]{ color: var(--muted); }
+.ba__toggle:checked + .ba__switch [data-after]{ color: var(--ink); }
+
+/* Frame */
+.ba__frame{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #000;
+  aspect-ratio: 16 / 9;                    /* consistent, responsive ratio */
+  border: 1px solid rgba(2,6,23,0.06);
+}
+
+/* Image layers */
+.ba__img{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  display:block;
+}
+
+/* Bottom layer = AFTER (fully visible) */
+.ba__img--after{ z-index: 1; }
+
+/* Top layer = BEFORE (partially revealed) */
+.ba__img--before{
+  z-index: 2;
+  /* Start at 50% split; reveal more on hover or when toggled */
+  clip-path: inset(0 50% 0 0);
+  transition: clip-path .35s ease;
+}
+
+/* Desktop: hover adjusts the split (reveals more BEFORE) */
+@media (hover:hover){
+  .ba__frame:hover .ba__img--before{
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Mobile/Touch: checkbox toggles the split */
+.ba__toggle:checked ~ .ba__frame .ba__img--before{
+  clip-path: inset(0 0 0 0);
+}
+
+/* Handle (purely decorative center bar) */
+.ba__handle{
+  position: absolute; inset: 0;
+  display: grid; place-items: center; pointer-events: none; z-index: 3;
+}
+.ba__handle-bar{
+  width: 2px; height: 70%;
+  background: linear-gradient(to bottom, rgba(255,255,255,.85), rgba(255,255,255,.4));
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+  transform: translateX(-25%); /* align with the 50% clip-path edge visually */
+}
+.ba__frame:hover .ba__handle-bar{ transform: translateX(0); transition: transform .35s ease; }
+.ba__toggle:checked ~ .ba__frame .ba__handle-bar{ transform: translateX(0); }
+
+/* Corner labels */
+.ba__labels{
+  position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  font-weight: 800; letter-spacing:.2px;
+}
+.ba__label{
+  position: absolute; top: 12px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(2,6,23,0.06);
+  box-shadow: var(--shadow);
+  padding: 6px 10px; border-radius: 999px; font-size: 14px;
+}
+.ba__label--before{ left: 12px; }
+.ba__label--after{ right: 12px; }
+
+/* Note */
+.ba__note{
+  text-align:center; font-size: 14px; color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Accessibility / Focus */
+.ba__switch:focus{
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
 
 /* Plans */
 .plans{ grid-template-columns: repeat(3, minmax(0,1fr)) }
