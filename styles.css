@@ -202,7 +202,7 @@ body{
 }
 
 .service-card--feature{
-  grid-column: span 8;
+  grid-column: span 4;
   display: grid;
   grid-template-columns: 56px 1fr auto;
   gap: 14px;
